@@ -1,7 +1,16 @@
-<p>roles works!</p>
 
-<div class="row">
-    <div class="col-12">
-        <p>ROLES COMPONENT</p>
-    </div>
-</div>
+<h2>Employee Roles</h2>
+<table class="table table-striped mt-5">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let role of roleList">
+            <td>{{role.roleId}}</td>
+            <td>{{role.role}}</td>
+        </tr>
+    </tbody>
+</table>
