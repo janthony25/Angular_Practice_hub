@@ -11,3 +11,30 @@
         <app-designations></app-designations>
     </div>
 </div>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-3 mx-5">
+            <h2>Products</h2>
+            <label for="">Product Name</label>
+            <select name="" id="" class="form-control" [(ngModel)]="productName">
+                <option value="">Please choose a product</option>
+                <option value="Pen">Pen</option>
+                <option value="Paper">Paper</option>
+                <option value="Notebook">Notebook</option>
+            </select>
+            <label for="" class="mt-2">Quantity</label>
+            <input type="number" class=" form-control" [(ngModel)]="quantity">
+        </div>
+        <div class="col-6">
+            <h2>Check out</h2>
+            <label for="">Product</label>
+            <input type="text" class="form-control" [value]="productName">
+            <label for="">Quantity</label>
+            <input type="text" class="form-control" [value]="quantity">
+            <label for="">Total</label>
+            <input type="text" class="form-control" [value]="calculateTotal()">
+            <button class="btn btn-primary mt-2">Complete Order</button>
+        </div>
+    </div>
+</div>
