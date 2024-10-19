@@ -13,5 +13,8 @@ import { CommonModule } from '@angular/common';
 export class MasterComponent {
   currentComponent: string = '';
 
-  
+  changeTab(newTab: string){
+    this.currentComponent = newTab;
+  }
+
 }

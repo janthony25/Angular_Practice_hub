@@ -1,13 +1,13 @@
 <div class="btn-group">
-    <button type="button" class="btn btn-primary">Roles</button>
-    <button type="button" class="btn btn-primary ms-2">Designations</button>
+    <button type="button" class="btn" (click)="changeTab('Roles')" [ngClass]="currentComponent == 'Roles' ? 'btn-primary' : 'btn-secondary'">Roles</button>
+    <button type="button" class="btn btn-primary ms-2" (click)="changeTab('Designations')" [ngClass]="currentComponent == 'Designations' ? 'btn-primary' : 'btn-secondary'">Designations</button>
   </div>
   
 <div class="row">
-    <div class="col-12">
+    <div class="col-12" *ngIf="currentComponent == 'Roles'">
         <app-roles></app-roles>
     </div>
-    <div class="col-12">
+    <div class="col-12" *ngIf="currentComponent == 'Designations'">
         <app-designations></app-designations>
     </div>
 </div>
